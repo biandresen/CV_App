@@ -20,7 +20,8 @@ section h2 {
 section label {
   font-weight: bold;
 }
-section button {
+section button,
+.form-button {
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 2px 5px;
@@ -38,4 +39,14 @@ section textarea {
   margin: 0px 0 10px 0;
   box-shadow: 2px 2px 3px hsl(0, 0%, 0%, 0.3);
   text-indent: 5px;
+}
+.form-button {
+  font-size: 1.6rem;
+  margin-top: 15px;
+  background-color: hsl(205, 60%, 85%);
+  border: 3px solid hsl(205, 60%, 45%);
+  transition: background-color 0.3s ease;
+}
+.form-button:hover {
+  background-color: hsl(205, 60%, 75%);
 }

@@ -19,6 +19,7 @@ function CVApp() {
   });
 
   const alertMessage = "Write something before adding";
+  const formIsFilled = Object.values(filled).every((value) => value === true);
 
   const handleNameClick = (nameInput) => {
     if (nameInput.trim() == "") return alert(alertMessage);
@@ -107,6 +108,9 @@ function CVApp() {
         handleDateFromClick={handleDateFromClick}
         handleDateToClick={handleDateToClick}
       />
+      <button className="form-button" style={formIsFilled ? { display: "block" } : { display: "none" }}>
+        Send form
+      </button>
     </div>
   );
 }
