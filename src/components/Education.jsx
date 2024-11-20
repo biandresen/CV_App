@@ -27,7 +27,7 @@ export default function Education({
   return (
     <section>
       <h2>Education</h2>
-      <button onClick={() => handleSchoolClick(schoolInput)}>
+      <button onClick={(e) => handleSchoolClick(e, schoolInput)}>
         {schoolFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="school">School: </label>
@@ -46,7 +46,7 @@ export default function Education({
       />
       <br />
 
-      <button onClick={() => handleTitleClick(titleInput)}>
+      <button onClick={(e) => handleTitleClick(e, titleInput)}>
         {titleFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="title">Title: </label>
@@ -65,7 +65,7 @@ export default function Education({
       />
       <br />
 
-      <button onClick={() => handleGradDateClick(gradDateInput)}>
+      <button onClick={(e) => handleGradDateClick(e, gradDateInput)}>
         {gradDateFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="gradDate">Graduation date: </label>

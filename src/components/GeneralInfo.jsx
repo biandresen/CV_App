@@ -27,7 +27,7 @@ export default function GeneralInfo({
   return (
     <section>
       <h2>General Information</h2>
-      <button onClick={() => handleNameClick(nameInput)}>
+      <button onClick={(e) => handleNameClick(e, nameInput)}>
         {nameFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="fullName">Full name:</label>
@@ -46,7 +46,7 @@ export default function GeneralInfo({
       />
       <br />
 
-      <button onClick={() => handleEmailClick(emailInput)}>
+      <button onClick={(e) => handleEmailClick(e, emailInput)}>
         {emailFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="email">Email: </label>
@@ -65,7 +65,7 @@ export default function GeneralInfo({
       />
       <br />
 
-      <button onClick={() => handlePhoneClick(phoneInput)}>
+      <button onClick={(e) => handlePhoneClick(e, phoneInput)}>
         {phoneFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="phoneNumber">Phone number: </label>

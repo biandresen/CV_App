@@ -41,7 +41,7 @@ export default function Experience({
   return (
     <section>
       <h2>Experience</h2>
-      <button onClick={() => handleCompanyClick(companyInput)}>
+      <button onClick={(e) => handleCompanyClick(e, companyInput)}>
         {companyFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="company">Company: </label>
@@ -60,7 +60,7 @@ export default function Experience({
       />
       <br />
 
-      <button onClick={() => handlePositionClick(positionInput)}>
+      <button onClick={(e) => handlePositionClick(e, positionInput)}>
         {positionFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="position">Position: </label>
@@ -84,7 +84,7 @@ export default function Experience({
       <br />
 
       <button
-        onClick={() => handleResponsibilitiesClick(responsibilitiesInput)}
+        onClick={(e) => handleResponsibilitiesClick(e, responsibilitiesInput)}
       >
         {responsibilitiesFilled ? "Edit" : "Add"}
       </button>
@@ -113,7 +113,7 @@ export default function Experience({
       />
       <br />
 
-      <button onClick={() => handleDateFromClick(dateFromInput)}>
+      <button onClick={(e) => handleDateFromClick(e, dateFromInput)}>
         {dateFromFilled ? "Edit" : "Add"}
       </button>
       <label htmlFor="dateFrom">Date from: </label>

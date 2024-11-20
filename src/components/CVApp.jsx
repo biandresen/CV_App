@@ -22,58 +22,92 @@ function CVApp() {
   const alertMessage = "Write something before adding";
   const formIsFilled = Object.values(filled).every((value) => value === true);
 
-  const handleNameClick = (nameInput) => {
-    if (nameInput.trim() == "") return alert(alertMessage);
+  function traverseSibling(e, number) {
+    let currentSibling = e.target.nextSibling;
+    for (let i = 0; i < number; i++) {
+      if (currentSibling.nextSibling) {
+        currentSibling = currentSibling.nextSibling;
+      }
+    }
+    if (currentSibling) {
+      currentSibling.focus();
+    }
+  }
+
+  const handleNameClick = (e, nameInput) => {
+    if (nameInput == undefined || nameInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, name: !filled.name });
+    traverseSibling(e, 9);
   };
 
-  const handleEmailClick = (emailInput) => {
-    if (emailInput.trim() == "") return alert(alertMessage);
+  const handleEmailClick = (e, emailInput) => {
+    if (emailInput == undefined || emailInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, email: !filled.email });
+    traverseSibling(e, 9);
   };
 
-  const handlePhoneClick = (phoneInput) => {
-    if (phoneInput.trim() == "") return alert(alertMessage);
+  const handlePhoneClick = (e, phoneInput) => {
+    if (phoneInput == undefined || phoneInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, phone: !filled.phone });
   };
 
-  const handleSchoolClick = (schoolInput) => {
-    if (schoolInput.trim() == "") return alert(alertMessage);
+  const handleSchoolClick = (e, schoolInput) => {
+    if (schoolInput == undefined || schoolInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, school: !filled.school });
+    traverseSibling(e, 9);
   };
 
-  const handleTitleClick = (titleInput) => {
-    if (titleInput.trim() == "") return alert(alertMessage);
+  const handleTitleClick = (e, titleInput) => {
+    if (titleInput == undefined || titleInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, title: !filled.title });
+    traverseSibling(e, 9);
   };
 
-  const handleGradDateClick = (gradDateInput) => {
-    if (gradDateInput.trim() == "") return alert(alertMessage);
+  const handleGradDateClick = (e, gradDateInput) => {
+    if (gradDateInput == undefined || gradDateInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, gradDate: !filled.gradDate });
   };
 
-  const handleCompanyClick = (companyInput) => {
-    if (companyInput.trim() == "") return alert(alertMessage);
+  const handleCompanyClick = (e, companyInput) => {
+    if (companyInput == undefined || companyInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, company: !filled.company });
+    traverseSibling(e, 9);
   };
 
-  const handlePositionClick = (positionInput) => {
-    if (positionInput.trim() == "") return alert(alertMessage);
+  const handlePositionClick = (e, positionInput) => {
+    if (positionInput == undefined || positionInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, position: !filled.position });
+    traverseSibling(e, 9);
   };
 
-  const handleResponsibilitiesClick = (responsibilitiesInput) => {
-    if (responsibilitiesInput.trim() == "") return alert(alertMessage);
+  const handleResponsibilitiesClick = (e, responsibilitiesInput) => {
+    if (
+      responsibilitiesInput == undefined ||
+      responsibilitiesInput.trim() == ""
+    )
+      return alert(alertMessage);
     setFilled({ ...filled, responsibilities: !filled.responsibilities });
+    traverseSibling(e, 9);
   };
 
-  const handleDateFromClick = (dateFromInput) => {
-    if (dateFromInput.trim() == "") return alert(alertMessage);
+  const handleDateFromClick = (e, dateFromInput) => {
+    if (dateFromInput == undefined || dateFromInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, dateFrom: !filled.dateFrom });
+    traverseSibling(e, 9);
   };
 
   const handleDateToClick = (dateToInput) => {
-    if (dateToInput.trim() == "") return alert(alertMessage);
+    if (dateToInput == undefined || dateToInput.trim() == "")
+      return alert(alertMessage);
     setFilled({ ...filled, dateTo: !filled.dateTo });
   };
 
