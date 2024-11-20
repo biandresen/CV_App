@@ -120,3 +120,14 @@ hr {
     hsl(191, 65%, 25%)
   );
 }
+
+@media (max-width: 600px) {
+  .CV-container {
+    width: 300px;
+  }
+  .react-logo {
+    width: 50px;
+    top: -25px;
+    right: 10px;
+  }
+}
