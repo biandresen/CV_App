@@ -4,49 +4,119 @@
   box-sizing: border-box;
 }
 body {
-  min-height: 100vh;
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(hsl(205, 60%, 75%), hsl(500, 60%, 75%));
+  background-color: #23272f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f6f7f9;
+}
+.react-logo {
+  position: absolute;
+  right: 30px;
+  top: 80px;
 }
 h1 {
-  margin: 20px 0;
+  margin: 10px 0 10px 0px;
+  width: fit-content;
+  color: transparent;
+  background: linear-gradient(
+    to right,
+    hsl(191, 65%, 50%),
+    hsl(191, 65%, 60%),
+    hsl(191, 65%, 70%),
+    hsl(191, 65%, 90%)
+  );
+  background-clip: text;
 }
-div {
-  padding-left: 20px;
+.CV-container {
+  position: relative;
+  margin-top: 20px;
+  padding: 10px 10px 30px 30px;
+  width: 600px;
+  box-shadow: 1px 1px 10px 5px hsl(0, 0%, 0%, 0.3);
+  background-color: #343a46;
+}
+.CV-sent-message {
+  color: #58c4dc;
+  font-size: 3rem;
+  display: none;
+  height: 80px;
+  margin-top: 40px;
+}
+.CV-sent-message.show {
+  color: #58c4dc;
+  font-size: 3rem;
+  display: block;
 }
 section h2 {
   margin: 15px 0 8px 0;
+  color: #58c4dc;
 }
 section label {
   font-weight: bold;
+  color: hsl(191, 65%, 85%);
 }
-section button,
-.form-button {
+section button {
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 2px 5px;
-  background-color: hsl(205, 60%, 75%);
-  border: 1px solid hsl(205, 60%, 65%);
-  border-radius: 8px;
-  box-shadow: 1px 1px 2px hsl(0, 0%, 0%, 0.3);
+  background-color: transparent;
+  color: #58c4dc;
   cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+section button:hover {
+  box-shadow: 0px 0px 3px 1px #58c4dc;
+}
+section button:focus {
+  box-shadow: 0px 0px 3px 2px #58c4dc;
 }
 section input,
 section textarea {
-  background: linear-gradient(hsl(205, 60%, 90%), hsl(500, 60%, 90%));
+  background-color: #23272f;
+  color: #58c4dc;
   border: none;
   border-radius: 5px;
   margin: 0px 0 10px 0;
-  box-shadow: 2px 2px 3px hsl(0, 0%, 0%, 0.3);
   text-indent: 5px;
+  font-size: 1rem;
+  padding: 3px;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+section input:focus,
+section textarea:focus {
+  box-shadow: 0px 0px 3px 2px #58c4dc;
 }
 .form-button {
-  font-size: 1.6rem;
-  margin-top: 15px;
-  background-color: hsl(205, 60%, 85%);
-  border: 3px solid hsl(205, 60%, 45%);
-  transition: background-color 0.3s ease;
+  font-size: 1.4rem;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #58c4dc;
+  background-color: #23272f;
+  border: 2px solid #58c4dc;
+  transition: box-shadow 0.2s ease-in-out;
 }
 .form-button:hover {
-  background-color: hsl(205, 60%, 75%);
+  box-shadow: 0px 0px 5px 1px #58c4dc;
+}
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    hsl(191, 65%, 25%),
+    hsl(191, 65%, 50%),
+    hsl(191, 65%, 75%),
+    hsl(191, 65%, 100%),
+    hsl(191, 65%, 75%),
+    hsl(191, 65%, 50%),
+    hsl(191, 65%, 25%)
+  );
 }

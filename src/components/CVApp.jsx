@@ -2,6 +2,7 @@ import { useState, useEffect, useContext, useRef } from "react";
 import GeneralInfo from "./GeneralInfo";
 import Education from "./Education";
 import Experience from "./Experience";
+import ReactLogo from "./ReactLogo";
 
 function CVApp() {
   const [filled, setFilled] = useState({
@@ -76,41 +77,57 @@ function CVApp() {
     setFilled({ ...filled, dateTo: !filled.dateTo });
   };
 
+  const handleSendCV = () => {
+    const CVContent = document.querySelector(".CV-content");
+    const CVSentMessage = document.querySelector(".CV-sent-message");
+    CVContent.style.display = "none";
+    CVSentMessage.style.display = "block";
+  };
+
   return (
-    <div>
-      <h1>CV form</h1>
-      <GeneralInfo
-        nameFilled={filled.name}
-        emailFilled={filled.email}
-        phoneFilled={filled.phone}
-        handleNameClick={handleNameClick}
-        handleEmailClick={handleEmailClick}
-        handlePhoneClick={handlePhoneClick}
-      />
-      <Education
-        schoolFilled={filled.school}
-        titleFilled={filled.title}
-        studyFilled={filled.study}
-        gradDateFilled={filled.gradDate}
-        handleSchoolClick={handleSchoolClick}
-        handleTitleClick={handleTitleClick}
-        handleGradDateClick={handleGradDateClick}
-      />
-      <Experience
-        companyFilled={filled.company}
-        positionFilled={filled.position}
-        responsibilitiesFilled={filled.responsibilities}
-        dateFromFilled={filled.dateFrom}
-        dateToFilled={filled.dateTo}
-        handleCompanyClick={handleCompanyClick}
-        handlePositionClick={handlePositionClick}
-        handleResponsibilitiesClick={handleResponsibilitiesClick}
-        handleDateFromClick={handleDateFromClick}
-        handleDateToClick={handleDateToClick}
-      />
-      <button className="form-button" style={formIsFilled ? { display: "block" } : { display: "none" }}>
-        Send form
-      </button>
+    <div className="CV-container">
+      <ReactLogo size="120px" />
+      <h1>CV FORM</h1>
+      <hr />
+      <div className="CV-sent-message">CV sent!</div>
+      <div className="CV-content">
+        <GeneralInfo
+          nameFilled={filled.name}
+          emailFilled={filled.email}
+          phoneFilled={filled.phone}
+          handleNameClick={handleNameClick}
+          handleEmailClick={handleEmailClick}
+          handlePhoneClick={handlePhoneClick}
+        />
+        <Education
+          schoolFilled={filled.school}
+          titleFilled={filled.title}
+          studyFilled={filled.study}
+          gradDateFilled={filled.gradDate}
+          handleSchoolClick={handleSchoolClick}
+          handleTitleClick={handleTitleClick}
+          handleGradDateClick={handleGradDateClick}
+        />
+        <Experience
+          companyFilled={filled.company}
+          positionFilled={filled.position}
+          responsibilitiesFilled={filled.responsibilities}
+          dateFromFilled={filled.dateFrom}
+          dateToFilled={filled.dateTo}
+          handleCompanyClick={handleCompanyClick}
+          handlePositionClick={handlePositionClick}
+          handleResponsibilitiesClick={handleResponsibilitiesClick}
+          handleDateFromClick={handleDateFromClick}
+          handleDateToClick={handleDateToClick}
+        />
+        <button
+          onClick={handleSendCV}
+          className="form-button"
+          style={formIsFilled ? { display: "block" } : { display: "none" }}
+        >
+          Send CV
+        </button>
+      </div>
     </div>
   );
 }

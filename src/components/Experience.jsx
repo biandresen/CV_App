@@ -102,15 +102,14 @@ export default function Experience({
           responsibilitiesFilled ? { display: "none" } : { display: "inline" }
         }
       />
-      <input
+      <textarea
         style={
           responsibilitiesFilled ? { display: "none" } : { display: "inline" }
         }
         value={responsibilitiesInput}
         onChange={handleResponsibilitiesChange}
         id="responsibilities"
-        type="text"
-        placeholder="Enter the responsibilities you had..."
+        placeholder="Enter responsibilities..."
       />
       <br />
 
