@@ -1,8 +1,14 @@
-# React + Vite
+# CV Form
+Project task from <a href="https://www.theodinproject.com/lessons/node-path-react-new-cv-application">The Odin Project</a>.
+Made with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Check the App 👉 <a href="https://cv-app-git-main-biandresens-projects.vercel.app"/>Live Server</a>
 
-Currently, two official plugins are available:
+## Project goal
+First project using React. Focus on using state and passing properties.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Images
+![Screenshot from 2024-11-20 05-41-35](https://github.com/user-attachments/assets/56482442-c31e-41b2-a86e-17eaa41d7491)
+![Screenshot from 2024-11-20 05-44-34](https://github.com/user-attachments/assets/edb23fae-c6ff-489b-8194-fa24ddd4d2c1)
+![Screenshot from 2024-11-20 05-44-44](https://github.com/user-attachments/assets/47a91d5c-de80-43c2-b12d-db28a3e1f78c)
+![Screenshot from 2024-11-20 05-44-57](https://github.com/user-attachments/assets/07b1c537-e7e8-4132-863f-4db1c9974104)
